@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+
+
+    <meta name="apple-mobile-web-app-title" content="Xfly">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+
+    <!-- build:css ./assets/css/main.css -->
+    <link rel="stylesheet" href="/src/assets/vendor/bootstarp/3.3.7-dist/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/src/assets/css/base.css" type="text/css"/>
+    <link rel="stylesheet" href="/src/assets/css/xfly.css" type="text/css"/>
+    <link rel="stylesheet" href="/src/assets/css/codes.css" type="text/css"/>
+    <link rel="stylesheet" href="/src/assets/css/animation.css" type="text/css"/>
+    <!-- endbuild -->
+
+
+    <link rel="stylesheet"
+          href="//res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css">
+
+    <title>Chenglong Xiao's Portfolio</title>
+    <meta name="description"
+          content="This is SPA framework for the lite Web App with Modern browser.">
+</head>
+<body id="xfly_viewport" class="x-ui">
+<div class="page-load-indicator" id="page_load_indicator" style="">
+    <div class="indicator-wrapper">
+        <div class="indicator">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <rect x="0" y="13" width="4" height="4" fill="#000">
+                    <animate attributeName="opacity" attributeType="XML" values="0;1;0" begin="0s" dur="1s" repeatCount="indefinite" />
+                </rect>
+                <rect x="10" y="13" width="4" height="4" fill="#000">
+                    <animate attributeName="opacity" attributeType="XML" values="0;1;0" begin="0.15s" dur="1s" repeatCount="indefinite" />
+
+                </rect>
+                <rect x="20" y="13" width="4" height="4" fill="#000">
+                    <animate attributeName="opacity" attributeType="XML" values="0;1;0" begin="0.3s" dur="1s" repeatCount="indefinite" />
+                </rect>
+            </svg>
+        </div>
+    </div>
+</div>
+<!-- build:js ./assets/js/lib.js -->
+<script src="/src/app/build/template.js"></script>
+<script src="/src/app/build/footer.tpl.js"></script>
+<script src="/src/assets/vendor/zepto/1.2.0/zepto.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+        src="/src/assets/js/xfly/xfly-dev-0.1.52.js"></script>
+<!-- endbuild -->
+<script type="text/javascript"
+        src="//res.wx.qq.com/open/libs/weuijs/1.1.3/weui.min.js"></script>
+<script defer>
+
+
+var manifest={"/":["assets/js/47.js?_=M1139858847"],"/index":["assets/js/1445916163.js?_=M1139858847"],"/designs/lairen/pro":["assets/js/M831826578.js?_=972668650"],"/codes/index":["assets/js/M367778278.js?_=471828479"],"/codes/xfly/examples/index":["assets/js/M1832910232.js?_=M49185324"],"/codes/xfly/examples/multi/instance":["assets/js/1666285525.js?_=452337632"],"/codes/xfly/examples/page/with/args":["assets/js/138349616.js?_=M1043761607"],"/codes/xfly/examples/reload":["assets/js/M736044349.js?_=913426705"],"/codes/xfly/examples/see/you/again":["assets/js/M762555830.js?_=M190231034"],"/codes/xfly/examples/member/not/engagement":["assets/js/158313126.js?_=M951065216"],"/codes/xfly/examples/member/engagement":["assets/js/M406387862.js?_=1585185934"]};
+
+
+    $.ajaxSettings[ 'cache' ] = ! 1;
+    var hasMember = false;
+
+    $( function () {
+        /*alert( 'Now, take you to the SPA mode.' );*/
+        var target = manifest[ location.pathname ] || [];
+        for ( var idx in target ) {
+            import_script( target[ idx ], idx == target.length - 1 ? function () {
+                go( 'index' );
+            } : void 0 );
+        }
+    } );
+</script>
+</body>
+</html>
