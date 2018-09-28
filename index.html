@@ -8,21 +8,42 @@
     <meta name="author" content="Lyna">
     <title>Lyna's Blog</title>
     <link rel="stylesheet" href="assets/libs/bootstrap-3.3.7/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/libs/font-awesome-4.7.0/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/libs/pagePiling/jquery.pagepiling.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-    <div class="wrapper">
-        <div class="cv-container">
-            <div id="section1" class="section active">
-                <div id="top" title="顶部" style="display: block;">
-                    <img src="assets/img/home/top.png" alt="回到顶部">
-                </div>
+    <div id="nav-bar" class="bar fixed" style="display: none;">
+        <div class="container">
+            <a href="http://www.xiaoyuezhang.com/drip.html">
+                <div class="fl">Lyna's Blog</div>
+            </a>
+            <ul class="fr nav-ul" id="menu">
+                <li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+                <li data-menuanchor="page2"><a href="#page2">关于我</a></li>
+                <li data-menuanchor="page3"><a href="#page3">技术掌握</a></li>
+                <li data-menuanchor="page4"><a href="#page4">作品展示</a></li>
+                <li data-menuanchor="page5"><a href="#page5">联系我</a></li>
+            </ul>
+            <div class="fr more-nav">
+                <img src="assets/img/home/more.png" alt="更多">
+            </div>
+        </div>
+        <ul class="nav-ul nav-xs-ul" style="display: none;">
+            <li data-menuanchor="page1"><a href="#page1">首页</a></li>
+            <li data-menuanchor="page2"><a href="#page2">关于我</a></li>
+            <li data-menuanchor="page3"><a href="#page3">技术掌握</a></li>
+            <li data-menuanchor="page4"><a href="#page4">作品展示</a></li>
+            <li data-menuanchor="page5"><a href="#page5">联系我</a></li>
+        </ul>
+    </div>
+    <div id="pagepiling">
+            <div id="section1" class="section index-op">
                 <div class="myIntro">
                     <h1 class="fade fadesin1">Hello,world.</h1>
                     <span class="active fade fadesin3" id="abMe">关于我</span>
-                    <span id="mypro" class="fade fadesin3">我的作品</span>
+                    <span id="mypro" class="fade fadesin3" data-menuanchor="page4"><a href="#page4">我的作品</a></span>
                 </div>
                 <ul class="bg-img">
                     <li class=""></li>
@@ -32,39 +53,10 @@
                 </ul>
             </div>
 
-            <div id="section2" class="section active">
-                <!-- 导航条-->
-                <div id="nav-bar" class="bar fixed">
-                    <div class="container">
-                        <a href="http://www.xiaoyuezhang.com/drip.html">
-                            <div class="fl">Lyna's Blog</div>
-                        </a>
-                        <ul class="fr nav-ul">
-                            <li class="">关于我</li>
-                            <!-- <li class="">求职意向</li> -->
-                            <li class="">技术掌握</li>
-                            <li class="">作品展示</li>
-                            <!-- <li class="active">我的经历</li> -->
-                            <li class="">联系我</li>
-                        </ul>
-                        <div class="fr more-nav">
-                            <img src="assets/img/home/more.png" alt="更多">
-                        </div>
-                    </div>
-                    <ul class="nav-ul nav-xs-ul" style="display: none;">
-                        <li class="">关于我</li>
-                        <!-- <li class="">求职意向</li> -->
-                        <li class="">技术掌握</li>
-                        <li class="">作品集</li>
-                        
-                        <!-- <li class="active">我的经历</li> -->
-                        <li class="">联系我</li>
-                    </ul>
-                </div>
-
+            <div id="section2" class="section">
                 <!--关于我-->
                 <h2>关于我</h2>
-                <div class="container text-center fades fadesin my-intro">
+                <div class="container text-center my-intro">
                     <div class="col-md-3 col-xs-6 skill-ps skill">
                         <div class="img"><img src="assets/img/home/i_edu.svg" alt=""></div>
                         <p class="ptitle">自学前端</p>
@@ -79,7 +71,7 @@
                     </div>
                     <div class="col-md-3 col-xs-6 skill-h5 skill">
                         <div class="img"><img src="assets/img/home/i_status.svg" alt=""></div>
-                        <p class="ptitle">更多了解<a href="https://github.com/lynachen" style="color: #ff7800;"><i class="fa fa-github"></i></a>~</p>
+                        <p class="ptitle" data-menuanchor="page5"><a href="#page5" style="color: #ff7800;">更多了解~</a></p>
                     </div>
                     <div class="hot-words">
                         <p>偶然的机会接触到前端开发这个行业，</p>
@@ -90,7 +82,7 @@
                     </div>
                 </div>
             </div>
-            <div id="section3" class="section active">
+            <div id="section3" class="section">
                 <h2>技术掌握</h2>
                 <div class="container text-center fades fadesin">
                     <div class="col-md-3 col-xs-6">
@@ -143,34 +135,7 @@
                     </div>
                 </div>
             </div>
-            <div id="section4" class="section active">
-                <!-- <h2>求职意向</h2>
-                <div class="container text-center fades fadesin">
-                    <div class="col-md-3 col-xs-6 skill-ps skill">
-                        <p><img src="assets/img/home/web.png" alt="切图"></p>
-                        <p class="ptitle">PS切图</p>
-                        <p>从PSD上切出页面需要的图片</p>
-                        <p>将小图标合成spirts优化。</p>
-                    </div>
-                    <div class="col-md-3 col-xs-6 skill-web skill">
-                        <p><img src="assets/img/home/css.png" alt="css"></p>
-                        <p class="ptitle">网页制作</p>
-                        <p>响应式页面,简单不冗余代码。</p>
-                        <p>css3流畅动画效果，兼容不同浏览器。</p>
-                    </div>
-                    <div class="col-md-3 col-xs-6 skill-js skill">
-                        <p><img src="assets/img/home/js.png" alt="js"></p>
-                        <p class="ptitle">前端功能</p>
-                        <p>用JS完成常见的前端功能特效</p>
-                        <p>用AJAX读取后台数据。</p>
-                    </div>
-                    <div class="col-md-3 col-xs-6 skill-h5 skill">
-                        <p><img src="assets/img/home/h5.png" alt="h5"></p>
-                        <p class="ptitle">h5页面</p>
-                        <p>移动端页面的书写</p>
-                        <p>兼容平板、安卓、IOS不同终端。</p>
-                    </div>
-                </div> -->
+            <div id="section4" class="section">
                 <h2>作品展示</h2>
                 <div class="container text-center fades fadesin">
                     <div class="col-md-3 col-xs-6">
@@ -197,18 +162,6 @@
                             </div>
                         </a>
                     </div>
-                    <!-- <div class="col-md-3 col-xs-6">
-                        <div class="imgbox">
-                            <img src="assets/img/home/02.jpg" alt="作品配图">
-                        </div>
-                        <a href="https://lynachen.github.io/Snake_Game/index.html" target="_blank">
-                            <div class="zp-cover">
-                                <h4 style="color: rgb(255, 255, 255);">游戏类页面</h4>
-                                <p>贪食蛇计分游戏</p>
-                                <img src="assets/img/home/search.png" alt="查看">
-                            </div>
-                        </a>
-                    </div> -->
                     <div class="col-md-3 col-xs-6">
                         <div class="imgbox">
                             <img src="assets/img/home/03.jpg" alt="作品配图">
@@ -221,31 +174,6 @@
                             </div>
                         </a>
                     </div>
-<!--                     <div class="col-md-3 col-xs-6 ">
-                        <div class="imgbox">
-                            <img src="assets/img/home/04.jpg" alt="作品配图">
-                        </div>
-                        <a href="http://www.cbecm.com/Anchor/Anchor/anchor_detai?id=RjA4QzAyMzUtNERCNC04MjM1LUY2NTQtQUM2NTdGMkQ4OTcx" target="_blank">
-                            <div class="zp-cover">
-                                <h4 style="color: rgb(255, 255, 255);">详情类页面</h4>
-                                <p>视频播放，富文本编辑器手写。</p>
-                                <img src="assets/img/home/search.png" alt="查看">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-xs-6 ">
-                        <div class="imgbox">
-                            <img src="assets/img/home/05.jpg" alt="作品配图">
-                        </div>
-                        <a href="http://www.cbecm.com/Home/Index/index" target="_blank">
-                            <div class="zp-cover">
-                                <h4 style="color: rgb(255, 255, 255);">官网类首页</h4>
-                                <p>多数据响应式网页，能兼容不同大小电脑分辨率</p>
-                                <img src="assets/img/home/search.png" alt="查看">
-                            </div>
-                        </a>
-                    </div> -->
-
                     <div class="col-md-3 col-xs-6">
                         <div class="imgbox">
                             <img src="assets/img/home/07.jpg" alt="作品配图">
@@ -258,82 +186,68 @@
                             </div>
                         </a>
                     </div>
-                    <!-- <div class="col-md-3 col-xs-6">
-                        <div class="imgbox">
-                            <img src="assets/img/home/08.jpg" alt="作品配图">
-                        </div>
-                        <a href="https://blog.csdn.net/Julylyna" target="_blank">
-                            <div class="zp-cover">
-                                <h4 style="color: rgb(255, 255, 255);">我的技术博客</h4>
-                                <p>自己平时的知识点积累~</p>
-                                <img src="assets/img/home/search.png" alt="查看">
-                            </div>
-                        </a>
-                    </div> -->
                     <div>
                         <a target="_blank" href="https://github.com/lynachen">
                             <button id="button" class="btn btn-success btn-lg" style="margin-top: 30px;"> 
-                                <i class="fa fa-github" aria-hidden="true"></i> See on Github
+                               See on Github&nbsp;<i class="fa fa-github"></i>
                             </button>
                         </a>
                     </div>
                 </div>                
             </div>
-
-
-<!--             <div id="section6" class="section active">
-                <h2>我的经历</h2>
-                <div class="container text-center fades fadesin">
-                    <ul class="my-xp">
-                        <li>
-                            <div class="date-box">
-                                <p>06/2017</p>
-                                <p>-</p>
-                                <p>至今</p>
-                            </div>
-                            <div class="my-work my-xp-box">
-                                <strong>易电联（北京）电子商务有限公司</strong>
-                                <p class="ptitle">技术部/前端工程师</p>
-                                <p>主要负责电商平台及金融平台的开发工作。</p>
-                                <p>利用JS、CSS3书写前端功能，让页面更充实丰富</p>
-                                <p>并将代码上传到代码托管平台上</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="date-box">
-                                <p>09/2009</p>
-                                <p>-</p>
-                                <p>06/2012</p>
-                            </div>
-                            <div class="my-school my-xp-box">
-                                <strong>山西大学</strong>
-                                <p class="ptitle">大学本科</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div> -->
-            <div id="section5" class="section active">
+            <div id="section5" class="section">
                 <h2>联系我</h2>
-                <div class="container fades fadesin">
+                <div class="container">
                     <p class="lead text-center">
-                        <i class="fa fa-phone-square"></i> 
+                        <i class="fa fa-phone-square"></i>&nbsp;&nbsp; 
                         186-0049-0703
                     </p>
                     <p class="lead text-center"> 
-                        <i class="fa fa-envelope-open"></i> 
+                        <i class="fa fa-envelope-open"></i>&nbsp;&nbsp; 
                         lynachen@126.com
                     </p>
                 </div>
+                <div class="footer text-center">
+                    <p><a href="https://github.com" target="_blank">Hosted on GitHub</a></p>
+                    <p>© Lyna</p>
+                </div>
             </div>
-        </div>
-        <div class="footer text-center">
-            <p><a href="https://github.com" target="_blank">Hosted on GitHub</a></p>
-            <p>© Lyna</p>
-        </div>
-
-    </div>
+    </div> 
     <script src="assets/libs/jquery-1.12.4/jquery.min.js"></script>
-    <script src="assets/js/index.js"></script>   
+    <script src="assets/libs/pagePiling/jquery.pagepiling.min.js"></script>
+    <script src="assets/js/index.js"></script> 
+    <script>
+        var deleteLog = false;
+        $(document).ready(function() {
+            $('#pagepiling').pagepiling({
+                menu: '#menu',
+                anchors: ['page1', 'page2', 'page3','page4','page5'],
+                sectionsColor: [ '#fafafa', '#fafafa', '#fff','#fafafa','#fff'],
+                keyboardScrolling: true,
+                onLeave: function(index, nextIndex, direction){
+                    if(deleteLog){
+                        $('#callbacksDiv').html('');
+                    }
+                    $('#callbacksDiv').append('<p>onLeave - index:' + index + ' nextIndex:' + nextIndex + ' direction:' + direction + '</p>')
+                },
+                afterRender: function(){
+                    $('#callbacksDiv').append('<p>afterRender</p>');
+                },
+                afterLoad: function(anchorLink, index){
+                    $(".section").removeClass("index-op");
+                    $("#section"+index+"").addClass("index-op"); 
+                    setTimeout(function() {
+                        $(".section .ad-contairn-box").hide();
+                        $("#section"+index+" .ad-contairn-box").show();
+                    }, 100);
+                    if(index==1){
+                        $("#nav-bar").fadeOut(600);
+                    }else{
+                        $("#nav-bar").fadeIn(600);
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
