@@ -358,7 +358,8 @@ i.fa {font-size: 22px;}
     letter-spacing: 2px;
  }
 
-.my-intro .hot-words {
+.hot-words p {
+    font-size: .28rem;
     color: #000;
     line-height: 2;
 }
@@ -480,49 +481,48 @@ div.skill p{
     transition: all 0.3s linear;
     padding: 0;
 }
-#section4 .container > div .zp-cover{
+#section4 .container > div .img-layer{
     position: absolute;
     display: none;
     width: 100%;
+    height: 100%;
+    padding: 10px;
     top: 50%;
     margin-top: -46px;
     left: 0;
 }
-#section4 .container > div .zp-cover h4{
+#section4 .container > div .img-layer h4{
     font-size: 16px;
-    font-weight: 600;
-    color: #ffffff;
+    color: #fff;
 }
 
-#section4 .container > div .zp-cover p{
+#section4 .container > div .img-layer p{
     color: #fff;
     font-size: 14px;
     text-align: center;
     margin: 10px 0;
-    padding: 0 1em;
+    padding: 0 10px;
 }
-#section4 .container > div .zp-cover img{
+#section4 .container > div .img-layer img{
     width: 25px;
     height: 25px;
 }
 
-#section4 .container > div:hover .zp-cover{
+#section4 .container > div:hover .img-layer{
     display: block;
-    padding:  0 2em;
 }
-#section4 .container > div:hover .imgbox img{
+#section4 .container > div:hover .img-box img{
     -webkit-filter: brightness(0.3);
     filter: brightness(0.3);
 }
 
-#section4 .container>div .imgbox{
+#section4 .container>div .img-box{
     width:100%;
-    height: 0;
-    padding-bottom: 100%;
+    height: 100%;
     overflow: hidden;
     text-align: center;
 }
-#section4 .container .imgbox img{
+#section4 .container .img-box img{
     width: 100%;
     transition: all 0.3s ease;
 }
@@ -762,10 +762,10 @@ h4{
         display: block;
     }
     /*我的作品hover改变*/
-    #section4 .container > div .zp-cover{
+    #section4 .container > div .img-layer{
         display: block;
     }
-    #section4 .container>div .imgbox img{
+    #section4 .container>div .img-box img{
         -webkit-filter: brightness(0.3);
         filter: brightness(0.3);
     }
@@ -817,23 +817,29 @@ h4{
         /*height: 120vh;*/
     }
     .section h2{
-        margin-top: 2rem;
+        font-size: .48rem;
+        margin-top: 1.6rem;
+        margin-bottom: .8rem;
     }
     .ptitle{
         font-size: .3rem;
+    }
+    .my-intro .img {
+        width: 1.4rem;
+        height: 1.4rem;
     }
     /*我的作品 字体改变*/
     #section4.section .intros{
         margin-bottom: 20px;
     }
-    #section4 .container > div .zp-cover p{
+    #section4 .container > div .img-layer p{
         font-size: 12px;
 
     }
     #section3 .container.center{
         margin-top: 40px;
     }
-    #section4 .container > div .zp-cover img{
+    #section4 .container > div .img-layer img{
         display: none;
     }
     #section6 .fades{
