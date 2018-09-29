@@ -41,13 +41,10 @@
         $(function(){
             var isPC=IsPC();
             if(isPC){
-                alert("pppppppppppc");
-                // $.getScript("./pc.js",function(){  //加载pc.js,成功后，并执行回调函数
-                //     console.log("加载js文件");
-                // });
+                console.log("不加载adaptive.js文件");
             } else{
                 $.getScript("assets/js/adaptive.js",function(){  //加载mobile.js,成功后，并执行回调函数
-                    console.log("加载js文件");
+                    console.log("加载adaptive.js文件");
                 });
             }
         });
