@@ -45,9 +45,6 @@
             } else{
                 $.getScript("assets/js/adaptive.js",function(){  //加载mobile.js,成功后，并执行回调函数
                     console.log("加载adaptive.js文件");
-                    window['adaptive'].desinWidth = 750;
-                    window['adaptive'].baseFont = 12;
-                    window['adaptive'].init();
                 });
             }
         });
