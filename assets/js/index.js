@@ -23,3 +23,31 @@
                 $(".nav-xs-ul").hide();
             }
         });
+
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        };
+        $(function(){
+            var isPC=IsPC();
+            if(isPC){
+                alert("pppppppppppc");
+                // $.getScript("./pc.js",function(){  //加载pc.js,成功后，并执行回调函数
+                //     console.log("加载js文件");
+                // });
+            } else{
+                $.getScript("assets/js/adaptive.js",function(){  //加载mobile.js,成功后，并执行回调函数
+                    console.log("加载js文件");
+                });
+            }
+        });
