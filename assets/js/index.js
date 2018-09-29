@@ -24,30 +24,30 @@
             }
         });
 
-        function IsPC() {
-            var userAgentInfo = navigator.userAgent;
-            var Agents = ["Android", "iPhone",
-            "SymbianOS", "Windows Phone",
-            "iPad", "iPod"];
-            var flag = true;
-            for (var v = 0; v < Agents.length; v++) {
-                if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                    flag = false;
-                    break;
-                }
-            }
-            return flag;
-        };
-        $(function(){
-            var isPC=IsPC();
-            if(isPC){
-                console.log("不加载adaptive.js文件");
-            } else{
-                $.getScript("assets/js/adaptive.js",function(){  //加载mobile.js,成功后，并执行回调函数
-                    console.log("加载adaptive.js文件");
-                    window['adaptive'].desinWidth = 750;
-                    window['adaptive'].baseFont = 12;
-                    window['adaptive'].init();
-                });
-            }
-        });
+        // function IsPC() {
+        //     var userAgentInfo = navigator.userAgent;
+        //     var Agents = ["Android", "iPhone",
+        //     "SymbianOS", "Windows Phone",
+        //     "iPad", "iPod"];
+        //     var flag = true;
+        //     for (var v = 0; v < Agents.length; v++) {
+        //         if (userAgentInfo.indexOf(Agents[v]) > 0) {
+        //             flag = false;
+        //             break;
+        //         }
+        //     }
+        //     return flag;
+        // };
+        // $(function(){
+        //     var isPC=IsPC();
+        //     if(isPC){
+        //         console.log("不加载adaptive.js文件");
+        //     } else{
+        //         $.getScript("assets/js/adaptive.js",function(){  //加载mobile.js,成功后，并执行回调函数
+        //             console.log("加载adaptive.js文件");
+        //             window['adaptive'].desinWidth = 750;
+        //             window['adaptive'].baseFont = 12;
+        //             window['adaptive'].init();
+        //         });
+        //     }
+        // });

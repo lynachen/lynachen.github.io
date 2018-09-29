@@ -354,12 +354,12 @@ i.fa {font-size: 22px;}
     text-align: center;
     font-size: 34px;
     color: #223355;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     letter-spacing: 2px;
  }
 
 .hot-words p {
-    font-size: .28rem;
+    font-size: 14px;
     color: #000;
     line-height: 2;
 }
@@ -791,42 +791,30 @@ h4{
 @media only screen and (max-width:415px){
 
     #section1 div.myIntro h1{
-        font-size: .5rem;
-        width: 16ch;
+        font-size: 28px;
     }
     #section1 div.myIntro h3{
         font-size: 16px;
     }
     #section1 div.myIntro > span{        
-        font-size: .28rem;
-        width: 4rem;
-        height: .8rem;
-        line-height: .8rem;
-    }
-    #nav-bar {
-        height: 1.4rem;
-    }
-    #nav-bar div.fl {
-        font-size: .4rem;
-        line-height: 1.4rem;
-    }
-    .more-nav img {
-        width: 1.4rem;
+        width: 200px;
+        height: 40px;
+        line-height: 38px;
     }
     #section4,#section2{
         /*height: 120vh;*/
     }
     .section h2{
-        font-size: .48rem;
-        margin-top: 1.6rem;
-        margin-bottom: .8rem;
+        font-size: 28px;
+        margin-top: 40px;
     }
     .ptitle{
-        font-size: .3rem;
+        font-size: 14px;
+        margin:10px 0;
     }
     .my-intro .img {
-        width: 1.4rem;
-        height: 1.4rem;
+        width: 60px;
+        height: 60px;
     }
     /*我的作品 字体改变*/
     #section4.section .intros{
