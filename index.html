@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-    <div id="nav-bar" class="bar fixed" style="display: none;">
+    <div id="nav-bar" class="nav-bar fixed" style="display: none;">
         <div class="container">
             <a href="https://github.com/lynachen">
                 <div class="fl">Lyna's Blog</div>
@@ -27,10 +27,13 @@
                 <li data-menuanchor="page4"><a href="#page4">作品展示</a></li>
                 <li data-menuanchor="page5"><a href="#page5">联系我</a></li>
             </ul>
+            <!-- 移动端折叠菜单按钮start -->
             <div class="fr more-nav">
                 <img src="assets/img/home/more.png" alt="更多">
             </div>
+            <!-- 移动端折叠菜单按钮end -->
         </div>
+        <!-- 移动端折叠菜单start -->
         <ul class="nav-ul nav-xs-ul" style="display: none;">
             <li data-menuanchor="page1"><a href="#page1">首页</a></li>
             <li data-menuanchor="page2"><a href="#page2">关于我</a></li>
@@ -38,8 +41,10 @@
             <li data-menuanchor="page4"><a href="#page4">作品展示</a></li>
             <li data-menuanchor="page5"><a href="#page5">联系我</a></li>
         </ul>
+        <!-- 移动端折叠菜单end -->
     </div>
     <div id="pagepiling">
+            <!-- 第一屏：首页 -->
             <div id="section1" class="section section1 index-op">
                 <div class="myIntro">
                     <h1 class="fade fadesin1">Hello,world.</h1>
@@ -47,17 +52,17 @@
                     <span id="mypro" class="fade fadesin3" data-menuanchor="page4"><a href="#page4">我的作品</a></span>
                 </div>
                 <ul class="bg-img">
-                    <li class=""></li>
-                    <li style="display: list-item;" class=""></li>
+                    <li></li>
+                    <li></li>
                     <li class="show"></li>
-                    <li class=""></li>
+                    <li></li>
                 </ul>
             </div>
 
-            <div id="section2" class="section section2">
-                <!--关于我-->
+            <!--第二屏：关于我-->
+            <div id="section2" class="section section2">               
                 <h2>关于我</h2>
-                <div class="container text-center my-intro">
+                <div class="container text-center my-intro fades fadesin">
                     <div class="col-md-3 col-xs-6 skill-ps skill">
                         <div class="img"><img src="assets/img/home/i_edu.svg" alt=""></div>
                         <p class="ptitle">自学前端</p>
@@ -75,7 +80,7 @@
                         <p class="ptitle" data-menuanchor="page5"><a href="#page5" style="color: #ff7800;">更多了解~</a></p>
                     </div>
                 </div>
-                <div class="container text-center hot-words">
+                <div class="container text-center hot-words fades fadesin">
                     <p>偶然的机会接触到前端开发这个行业，</p>
                     <p>隐隐有种相见恨晚的错觉。</p>
                     <p>可是，又有什么关系呢。</p>
@@ -169,17 +174,17 @@
             </div>
             <div id="section5" class="section section5">
                 <h2>联系我</h2>
-                <div class="container">
-                    <p class="lead text-center">
+                <div class="container text-center fades fadesin">
+                    <p class="lead">
                         <i class="fa fa-phone-square"></i>&nbsp;&nbsp; 
                         186-0049-0703
                     </p>
-                    <p class="lead text-center"> 
+                    <p class="lead"> 
                         <i class="fa fa-envelope-open"></i>&nbsp;&nbsp; 
                         lynachen@126.com
                     </p>
                 </div>
-                <div class="footer text-center">
+                <div class="footer text-center fades fadesin">
                     <p><a href="https://github.com" target="_blank">Hosted on GitHub</a></p>
                     <p>© Lyna</p>
                 </div>
